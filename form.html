@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #4285f4;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 30px; /* Increased margin for spacing */
+            max-width: 350px
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Increased margin for spacing */
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px; /* Increased margin for spacing */
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px; /* Increased margin for spacing */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 150px; /* Increased height */
+        }
+
+        button[type="submit"] {
+            background-color: #4285f4;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Feedback Form</h1>
+    </div>
+    <div class="container">
+        <form action="/submit_feedback" method="POST">
+            <div class="question">
+                <label for="feedback">Do you like my teaching?</label>
+                <div style="display: flex; align-items: center;">
+                    <input type="radio" name="feedback" value="green"> Excellent
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <input type="radio" name="feedback" value="amber"> Good
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <input type="radio" name="feedback" value="red"> Average
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

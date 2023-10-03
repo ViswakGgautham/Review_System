@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Link</title>
+    <!-- Include the necessary JavaScript library for generating QR codes -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Scan the QR Code to give feedback</h1>
+    <!-- Create a container for the QR code -->
+    <div id="qrcode"></div>
+
+    <script>
+        // URL to link to (target.html in this case)
+        var linkURL = "http://127.0.0.1:5000/form.html"; // Update with the correct path to your target HTML page
+
+        // Generate the QR code and display it in the "qrcode" div
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: linkURL,
+            width: 128,
+            height: 128
+        });
+    </script>
+</body>
+</html>
