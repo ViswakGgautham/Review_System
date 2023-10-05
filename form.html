@@ -85,14 +85,21 @@
             <div class="question">
                 <label for="feedback">Do you like my teaching?</label>
                 <div style="display: flex; align-items: center;">
-                    <input type="radio" name="feedback" value="green"> Excellent
+                    <input type="radio" name="feedback" value="green"> 🙂
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <input type="radio" name="feedback" value="amber"> Good
+                    <input type="radio" name="feedback" value="amber"> 😐
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <input type="radio" name="feedback" value="red"> Average
+                    <input type="radio" name="feedback" value="red"> 😕
                 </div>
+                <label for="feedback">choose class</label>
+                        <select id="class_id" name="class_id" required>
+                        {% for class in classes %}
+                        <option value='{{class}}'>{{ class }}</option>
+                        {% endfor %}
+                        </select>
+
             </div>
 
             <div class="question">
